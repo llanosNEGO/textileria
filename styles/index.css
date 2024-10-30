@@ -5,38 +5,6 @@
     box-sizing: border-box;
 }
 
-.categories {
-    text-align: center;
-    padding: 20px;
-}
-
-.categories h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.category-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.category-item {
-    text-align: center;
-}
-
-.category-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.category-title {
-    font-size: 16px;
-    color: #333;
-    margin-top: 10px;
-    text-transform: uppercase;
-}
 /* Navbar */
 .navbar {
     display: flex;
@@ -84,37 +52,121 @@
     width: 80px;
 }
 
-/* Main Content */
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 50px 0;
+/* SECCION CATEGORIAS */
+section.categories {
+    text-align: center;
+    padding: 20px;
 }
 
-.products img {
+section.categories h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+section.categories h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.category-list {
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    position: relative;
+}
+
+.category-image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Estilos generales */
+section.vendido {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    max-width: 800px; /* Limita el ancho de la sección */
+    margin: auto; /* Centra la sección */
+}
+
+section.vendido h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la lista de productos */
+.productos {
+    display: flex;
+    overflow: hidden; /* Oculta el scroll */
+    padding: 5px 0;
+    gap: 10px;
+    justify-content: center; /* Centra el contenido */
+}
+
+/* Ajustes de cada tarjeta de producto */
+.apartado {
+    flex: 0 0 180px; /* Ajusta el ancho de cada tarjeta */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    background-color: #fff;
+}
+
+.imagen img {
     width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
+.descripcion h1 {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
 
-/* Footer */
-.footer-container {
+/* Estilo del precio */
+.descripcion h1:last-child {
+    font-size: 1.2em;
+    color: #e60000;
+    font-weight: bold;
+}
+
+/* Estilos de los botones de navegación */
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    max-width: 800px; /* Alinea los botones con la sección centrada */
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background-color: #f8f8f8;
+    transform: translateY(-50%);
+    margin: auto;
 }
 
-.footer-left, .footer-center, .footer-right {
-    flex: 1;
+#prev, #next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
 }
 
-.footer-logo {
-    width: 100px;
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.payment-methods img {
-    width: 50px;
-    margin-right: 10px;
-}
