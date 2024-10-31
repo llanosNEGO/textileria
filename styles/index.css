@@ -5,6 +5,81 @@
     box-sizing: border-box;
 }
 
+/*MENU*/
+.carrousel{
+    width: 100%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    padding-left: 210px;
+    padding-right:210px;
+    text-align: center;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: rgb(226, 50, 50);
+}
+
+#itemCarrousel-2{
+    background-color: rgb(50, 200, 226);
+}
+
+#itemCarrousel-3{
+    background-color: rgb(200, 226, 50);
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: white;
+}
+.img{
+    width: 100%;
+    height: 100%;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -88,85 +163,78 @@ section.categories h3 {
     cursor: pointer;
 }
 
-/* Estilos generales */
-section.vendido {
-    text-align: center;
+/* -------------------------- */
+
+/* General styling for the section */
+.vendido {
     padding: 20px;
-    position: relative;
-    max-width: 800px; /* Limita el ancho de la sección */
-    margin: auto; /* Centra la sección */
+    text-align: center;
 }
 
-section.vendido h2 {
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
+.vendido h2 {
+    font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
+    display: flex; /* Contenedor padre */
+    justify-content: center;
 }
 
-/* Estilo de la lista de productos */
+/* Styling for the product container */
 .productos {
     display: flex;
-    overflow: hidden; /* Oculta el scroll */
-    padding: 5px 0;
-    gap: 10px;
-    justify-content: center; /* Centra el contenido */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 800px;
+    margin: 0 auto;
 }
 
-/* Ajustes de cada tarjeta de producto */
+/* Each product container */
 .apartado {
-    flex: 0 0 180px; /* Ajusta el ancho de cada tarjeta */
-    border: 1px solid #ddd;
+    background-color: #f8f8f8;
     border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.2s ease;
 }
 
-.imagen img {
+.apartado:hover {
+    transform: scale(1.05);
+}
+
+/* Product image styling */
+.imagen {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.category-image {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Product description styling */
+.descripcion {
+    padding: 10px;
 }
 
 .descripcion h1 {
-    font-size: 1em;
-    color: #333;
-    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+    margin: 8px 0;
 }
 
-/* Estilo del precio */
-.descripcion h1:last-child {
-    font-size: 1.2em;
-    color: #e60000;
+.descripcion h1:last-of-type {
+    font-size: 18px;
+    color: #e63946;
     font-weight: bold;
 }
-
-/* Estilos de los botones de navegación */
-.nav-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    max-width: 800px; /* Alinea los botones con la sección centrada */
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    margin: auto;
-}
-
-#prev, #next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1.5em;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
-
-#prev:hover, #next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
