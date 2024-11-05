@@ -1,0 +1,53 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon{
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.search-btn {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.input{
+    width: 800px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border-color: #aaaaaa69;
+}
+.cart-icon, .h-pedios, .h-contactanos{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    padding-right: 15px;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 10px;
+    width: 80px;
+}
