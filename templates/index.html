@@ -12,17 +12,24 @@
     <header>
         <nav class="navbar">
             <div class="navbar-left">
-                <button class="menu-icon">☰</button>
+                <button class="menu-icon" onclick="toggleMenu()">☰</button>
                 <img src="../images/logo_leons.png" alt="LEONS Logo" class="logo">
             </div>
             <div class="navbar">
-                <input type="text" placeholder="" class="input">
+                <input type="text" placeholder="Buscar..." class="input">
                 <button class="search-btn">Buscar</button>
             </div>
             <div class="navbar-right">
                 <a href="#" class="h-pedios">Pedidos</a>
-                <a href="#" class="h-contactanos">Contactanos</a>
+                <a href="#" class="h-contactanos">Contáctanos</a>
                 <a href="#" class="cart-icon">🛒</a>
+            </div>
+            <!-- Menú desplegable -->
+            <div id="menuDropdown" class="menu-dropdown">
+                <a href="hombres_po.html">Polos Hombres</a>
+                <a href="hombres_bu.html">Buzos Hombres</a>
+                <a href="mujeres_po.html">Polos Mujeres</a>
+                <a href="mujeres_bu.html">Buzos Mujeres</a>
             </div>
         </nav>
     </header>
@@ -182,6 +189,21 @@
             </div>
         </div>
     </section>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuDropdown");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        // Cerrar el menú si se hace clic fuera de él
+        window.onclick = function(event) {
+            var menu = document.getElementById("menuDropdown");
+            if (!event.target.matches('.menu-icon')) {
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
 </html>
-
