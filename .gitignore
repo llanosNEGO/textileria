@@ -1,0 +1,12 @@
+node_modules/
+# Ignorar los archivos de bloqueo de dependencias, especialmente si usas una versión fija de npm o yarn en el equipo
+package-lock.json
+# Ignorar los archivos de configuración del entorno y otros archivos temporales
+.DS_Store
+.env
+# Ignorar configuraciones de VS Code específicas del usuario
+.vscode/
+# Archivos generados por Vite (como `dist/` si configuras Vite para builds de producción)
+dist/
+# Ignorar caché de npm
+npm-debug.log*
