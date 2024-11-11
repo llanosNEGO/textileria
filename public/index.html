@@ -27,6 +27,13 @@
                 <input type="text" placeholder="Buscar." class="input">
                 <button class="search-btn">Buscar</button>
             </div>
+            <div class="language-selector">
+                <label for="language-select">Idioma:</label>
+                <select id="language-select" onchange="changeLanguage()">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
             <!-- Menú lateral -->
             <div id="menuDropdown" class="menu-dropdown">
                 <div class="menu-header">
@@ -54,33 +61,34 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div id="carouselExampleIndicators" class="carousel slide">
+    <!-- Carousel -->
+    <section class="container mt-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/images/carrusel11.png" class="d-block w-100" alt=".">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/carrusel22.png" class="d-block w-100" alt=".">
-              </div>
-              <div class="carousel-item">
-                <img src="/images/carrusel33.png" class="d-block w-100" alt=".">
-              </div>
+                <div class="carousel-item active">
+                    <img src="/images/carrusel11.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/carrusel22.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/carrusel33.png" class="d-block w-100" alt="...">
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
     </section>
 
     <!-- Categorías -->
@@ -255,35 +263,66 @@
             menu.classList.toggle("show");
         }
 
-        // Cerrar el menú cuando se hace clic fuera de él
         window.onclick = function(event) {
             var menu = document.getElementById("menuDropdown");
             if (!event.target.closest('.menu-icon') && !event.target.closest('#menuDropdown')) {
                 menu.classList.remove("show");
             }
         }
-        // Función para alternar la vista previa
         function togglePreview(title, price, imageUrl) {
-            // Llamamos a la función para actualizar el contenido del modal
             openPreview(title, price, imageUrl);
         }
 
-        // Función para abrir el modal y mostrar la información del producto
         function openPreview(title, price, imageUrl) {
-            // Actualizamos el contenido del modal con la información del producto
             document.getElementById('modalImage').src = imageUrl;
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalPrice').innerText = price;
             
-            // Mostramos el modal
             document.getElementById('modalPreview').style.display = 'flex';
         }
 
-        // Función para cerrar el modal
         function closePreview() {
-            // Ocultamos el modal
             document.getElementById('modalPreview').style.display = 'none';
         }
+        async function loadTranslations(language) {
+            try {
+                const response = await fetch(`/locales/${language}.json`); 
+                const translations = await response.json();
+                updatePageContent(translations);
+            } catch (error) {
+                console.error('Error loading translations:', error);
+            }
+        }
+
+        function updatePageContent(translations) {
+            document.querySelector('.h-pedios').textContent = translations.navbar.register;
+            document.querySelectorAll('.h-pedios')[1].textContent = translations.navbar.orders;
+            document.querySelector('.h-contactanos').textContent = translations.navbar.contact_us;
+            document.querySelector('.search-btn').textContent = translations.navbar.search_placeholder;
+
+            document.querySelector('.categories h2').textContent = translations.sections.categories.sports_shirts;
+            document.querySelector('.categories h4').textContent = translations.sections.categories.best_designs;
+
+            document.querySelector('.footer-center1 a:nth-child(1)').textContent = translations.sections.footer.home;
+            document.querySelector('.footer-center1 a:nth-child(2)').textContent = translations.sections.footer.menu;
+            document.querySelector('.footer-center1 a:nth-child(3)').textContent = translations.sections.footer.service;
+            document.querySelector('.footer-center1 a:nth-child(4)').textContent = translations.sections.footer.blog;
+            document.querySelector('.footer-center1 a:nth-child(5)').textContent = translations.sections.footer.about_us;
+            document.querySelector('.footer-center2 a:nth-child(1)').textContent = translations.sections.footer.contact;
+            document.querySelector('.footer-center2 a:nth-child(2)').textContent = translations.sections.footer.phone;
+            document.querySelector('.footer-center2 a:nth-child(3)').textContent = translations.sections.footer.email;
+            document.querySelector('.footer-center2 a:nth-child(4)').textContent = translations.sections.footer.location;
+            document.querySelector('.footer-right h2').textContent = translations.sections.footer.payment_methods;
+        }
+
+        function changeLanguage() {
+            const language = document.getElementById('language-select').value;
+            loadTranslations(language);
+        }
+
+        window.onload = () => {
+            loadTranslations('es');
+        };
     </script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

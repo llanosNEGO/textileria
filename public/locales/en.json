@@ -1,0 +1,32 @@
+{
+    "navbar": {
+      "register": "Register",
+      "orders": "Orders",
+      "contact_us": "Contact Us",
+      "search_placeholder": "Search"
+    },
+    "sections": {
+      "carousel": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "categories": {
+        "sports_shirts": "SPORTS SHIRTS",
+        "best_designs": "The best designs!",
+        "sports_hoodies": "SPORTS HOODIES",
+        "latest_fashion": "The latest in fashion!"
+      },
+      "footer": {
+        "home": "Home",
+        "menu": "Menu",
+        "service": "Service",
+        "blog": "Blog",
+        "about_us": "About Us",
+        "contact": "Contact",
+        "phone": "Phone",
+        "email": "Email",
+        "location": "Address",
+        "payment_methods": "Payment Methods"
+      }
+    }
+  }
