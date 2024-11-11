@@ -5,77 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEONS</title>
     <link rel="stylesheet" href="../styles/niños_po.css">
+    <script src="https://kit.fontawesome.com/44c1fd9490.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="navbar-left">
-                <button class="menu-icon">☰</button>
-                <img src="../images/logo_leons.png" alt="LEONS Logo" class="logo">
+            <div class="navbar-left"> 
+                <button class="menu-icon"  onclick="toggleMenu()">☰</button>
+                <img src="/images/logo_leons.png" alt="LEONS Logo" class="logo">
             </div>
             <div class="navbar">
-                <input type="text" placeholder="" class="input">
-                <button class="search-btn">Buscar</button>
+                <a href="#" class="h-pedios">Registrate</a>
+                <a href="#" class="h-pedios">Pedidos</a>
+                <a href="#" class="h-contactanos">Contáctanos</a>
+                <a href="#" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="navbar-right">
-                <a href="#" class="h-pedios">Pedidos</a>
-                <a href="#" class="h-contactanos">Contactanos</a>
-                <a href="#" class="cart-icon">🛒</a>
+                <input type="text" placeholder="Buscar." class="input">
+                <button class="search-btn">Buscar</button>
+            </div>
+            <!-- Menú lateral -->
+            <div id="menuDropdown" class="menu-dropdown">
+                <div class="menu-header">
+                    <h2>¡Hola!</h2>
+                    <span onclick="toggleMenu()" class="close-btn">✖</span>
+                </div>
+                <div class="menu-content">
+                    <a href="#">Oportunidades Únicas</a>
+                    <a href="/templates/hombres_po.html">Hombre Polos</a>
+                    <a href="/templates/hombres_bu.html">Hombre Buzos</a>
+                    <a href="/templates/mujeres_po.html">Mujer Polos</a>
+                    <a href="/templates/mujeres_bu.html">Mujer Buzos</a>
+                    <a href="/templates/niños_po.html">Niños Polos</a>
+                    <a href="/templates/niños_bu.html">Niños Buzos</a>
+                    <a href="#">Nuevo</a>
+                    <a href="#">Accesorios Moda</a>
+                    <a href="#">Belleza y salud</a>
+                    <a href="#">Niños y Juguetes</a>
+                    <a href="#">Bebés</a>
+                    <a href="#">Bebés</a>
+                    <a href="#">Bebés</a>
+                    <a href="#">Bebés</a>
+                    <a href="#">Bebés</a>
+                </div>
             </div>
         </nav>
     </header>
     <section class="vendido">
-        <h2>Lo mas pedido en Buzos</h2>
+        <h2>Lo mas pedido en Buzos NIÑOS</h2>
         <div class="productos" >
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Hombre Diseño Adidas', 'S/ 59.99', '/images/hombre_buzos.png')">
                 <div class="imagen">
-                    <img src="../images/hombre_buzos.png" alt="hombre" class="category-image">
+                    <img src="/images/hombre_buzos.png" alt="hombre" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Hombre Diseño Adidas</h1>
                     <h1>S/ 59.99</h1>
                 </div>
             </div>
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Mujer Diseño Adidas', 'S/ 69.99', '/images/mujer_buzos.png')">  
                 <div class="imagen">
-                    <img src="../images/mujer_buzos.png" alt="mujer" class="category-image">
+                    <img src="/images/mujer_buzos.png" alt="mujer" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Mujer Diseño Adidas</h1>
                     <h1>S/ 69.99</h1>
                 </div>
             </div>
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
                 <div class="imagen">
-                    <img src="../images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Niños Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
                 <div class="imagen">
-                    <img src="../images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Niños Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
                 <div class="imagen">
-                    <img src="../images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Niños Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
                 <div class="imagen">
-                    <img src="../images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                </div>
+                <div class="descripcion">
+                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
+                    <h1>S/ 89.99</h1>
+                </div>
+            </div>
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+                <div class="imagen">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                </div>
+                <div class="descripcion">
+                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
+                    <h1>S/ 89.99</h1>
+                </div>
+            </div>
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+                <div class="imagen">
+                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Niños Diseño Adidas</h1>
@@ -84,5 +129,84 @@
             </div>
         </div>
     </section>
+    <div id="modalPreview" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closePreview()">&times;</span>
+            <img id="modalImage" src="" alt="Vista previa del producto">
+            <h1 id="modalTitle"></h1>
+            <h2 id="modalPrice"></h2>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="../images/logo_leons.png" alt="Khapy Logo" class="logo">
+            </div>
+            
+            <div class="footer-center1">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">SERVCIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">NOSOTROS</a></li>
+                </ul>
+            </div>
+            <div class="footer-center2">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-users"></i> CONTACTO</a></li>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> 999999999 </a></li>
+                    <li><a href="#"><i class="fa-solid fa-at"></i> contacto@LeonsPeru.com</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> Jr. Juan Villanueva 920 0600</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <h2>MEDIOS DE PAGO</h2>
+                <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuDropdown");
+            menu.classList.toggle("show");
+        }
+    
+        // Cerrar el menú cuando se hace clic fuera de él
+        window.onclick = function(event) {
+            var menu = document.getElementById("menuDropdown");
+            if (!event.target.closest('.menu-icon') && !event.target.closest('#menuDropdown')) {
+                menu.classList.remove("show");
+            }
+        }
+        // Función para alternar la vista previa
+        function togglePreview(title, price, imageUrl) {
+            // Llamamos a la función para actualizar el contenido del modal
+            openPreview(title, price, imageUrl);
+        }
+    
+        // Función para abrir el modal y mostrar la información del producto
+        function openPreview(title, price, imageUrl) {
+            // Actualizamos el contenido del modal con la información del producto
+            document.getElementById('modalImage').src = imageUrl;
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            
+            // Mostramos el modal
+            document.getElementById('modalPreview').style.display = 'flex';
+        }
+    
+        // Función para cerrar el modal
+        function closePreview() {
+            // Ocultamos el modal
+            document.getElementById('modalPreview').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
