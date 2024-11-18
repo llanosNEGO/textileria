@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .login-container {
+    width: 350px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .logo img {
+    width: 80px;
+    margin: 10px auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    color: #297492;
+    font-size: 18px;
+  }
+  
+  p {
+    margin: 5px 0 15px;
+    font-size: 14px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .password-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .password-container input {
+    flex: 1;
+  }
+  
+  .password-container .toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: -30px;
+    color: #888;
+  }
+  
+  .forgot-password {
+    font-size: 12px;
+    color: #297492;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-primary {
+    background: #297492;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .btn-primary:hover {
+    background: #297492;
+  }
+  
+  .btn-google,
+  .btn-apple {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .btn-google {
+    background: #fff;
+  }
+  
+  .btn-apple {
+    background: #000;
+    color: #fff;
+  }
+  
+  .new-user {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .create-account {
+    color: #297492;
+    text-decoration: none;
+  }
+  
+  .create-account:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 375px) {
+    .login-container {
+      width: 70%;
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 16px; 
+    }
+  
+    p {
+      font-size: 12px; 
+    }
+  
+    form input {
+      padding: 8px; 
+      font-size: 12px; 
+    }
+  
+    .password-container .toggle-password {
+      margin-left: -25px; 
+    }
+  
+    .btn-primary {
+      padding: 8px; 
+      font-size: 12px; 
+    }
+  
+    .btn-google,
+    .btn-apple {
+      padding: 8px; 
+      font-size: 12px; 
+    }
+  
+    .forgot-password {
+      font-size: 10px; 
+    }
+  
+    .new-user {
+      font-size: 10px; 
+    }
+  }

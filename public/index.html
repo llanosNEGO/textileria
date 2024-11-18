@@ -18,10 +18,10 @@
                 <img src="/images/logo_leons.png" alt="LEONS Logo" class="logo">
             </div>
             <div class="navbar">
-                <a href="#" class="h-pedios">Registrate</a>
-                <a href="#" class="h-pedios">Pedidos</a>
+                <a href="/templates/registrarse.html" class="h-pedios">Regístrate</a>
+                <a href="/templates/pedidos.html" class="h-pedios">Pedidos</a>
                 <a href="#" class="h-contactanos">Contáctanos</a>
-                <a href="#" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/templates/carrito.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="navbar-right">
                 <input type="text" placeholder="Buscar." class="input">
@@ -41,22 +41,22 @@
                     <span onclick="toggleMenu()" class="close-btn">✖</span>
                 </div>
                 <div class="menu-content">
-                    <a href="#">Oportunidades Únicas</a>
+                    <a href="/index.html">Inicio</a>
                     <a href="/templates/hombres_po.html">Hombre Polos</a>
                     <a href="/templates/hombres_bu.html">Hombre Buzos</a>
                     <a href="/templates/mujeres_po.html">Mujer Polos</a>
                     <a href="/templates/mujeres_bu.html">Mujer Buzos</a>
                     <a href="/templates/niños_po.html">Niños Polos</a>
                     <a href="/templates/niños_bu.html">Niños Buzos</a>
-                    <a href="#">Nuevo</a>
-                    <a href="#">Accesorios Moda</a>
-                    <a href="#">Belleza y salud</a>
-                    <a href="#">Niños y Juguetes</a>
-                    <a href="#">Bebés</a>
-                    <a href="#">Bebés</a>
-                    <a href="#">Bebés</a>
-                    <a href="#">Bebés</a>
-                    <a href="#">Bebés</a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
                 </div>
             </div>
         </nav>
@@ -295,14 +295,26 @@
         }
 
         function updatePageContent(translations) {
+            // Navbar
             document.querySelector('.h-pedios').textContent = translations.navbar.register;
             document.querySelectorAll('.h-pedios')[1].textContent = translations.navbar.orders;
             document.querySelector('.h-contactanos').textContent = translations.navbar.contact_us;
             document.querySelector('.search-btn').textContent = translations.navbar.search_placeholder;
 
+            // Categories
             document.querySelector('.categories h2').textContent = translations.sections.categories.sports_shirts;
             document.querySelector('.categories h4').textContent = translations.sections.categories.best_designs;
 
+            // Most sold section (vendido)
+            document.querySelector('.vendido h2').textContent = translations.sections.vendido.title;
+            document.querySelectorAll('.apartado')[0].querySelector('h1').textContent = translations.sections.vendido.product1.title;
+            document.querySelectorAll('.apartado')[0].querySelector('h1').nextElementSibling.textContent = translations.sections.vendido.product1.price;
+            document.querySelectorAll('.apartado')[1].querySelector('h1').textContent = translations.sections.vendido.product2.title;
+            document.querySelectorAll('.apartado')[1].querySelector('h1').nextElementSibling.textContent = translations.sections.vendido.product2.price;
+            document.querySelectorAll('.apartado')[2].querySelector('h1').textContent = translations.sections.vendido.product3.title;
+            document.querySelectorAll('.apartado')[2].querySelector('h1').nextElementSibling.textContent = translations.sections.vendido.product3.price;
+
+            // Footer
             document.querySelector('.footer-center1 a:nth-child(1)').textContent = translations.sections.footer.home;
             document.querySelector('.footer-center1 a:nth-child(2)').textContent = translations.sections.footer.menu;
             document.querySelector('.footer-center1 a:nth-child(3)').textContent = translations.sections.footer.service;

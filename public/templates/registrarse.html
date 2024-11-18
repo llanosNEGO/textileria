@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/registrate.css">
+    <title>Inicio de sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Título principal -->
+        <h1>Iniciar sesión</h1>
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/images/logo_leons.png" alt="Logo Leon's">
+        </div>
+
+        <!-- Subtítulo -->
+        <h2>¡Bienvenido a Leon's!</h2>
+        <p>Ingresa tu usuario y contraseña para iniciar sesión</p>
+
+        <!-- Formulario de inicio de sesión -->
+        <form id="login-form" action="#" method="POST">
+            <div class="form-group">
+                <input type="text" name="username" placeholder="Correo o DNI*" required>
+            </div>
+            <div class="form-group password-container">
+                <input type="password" name="password" placeholder="Contraseña*" required>
+                <button type="button" class="toggle-password">👁️</button>
+            </div>
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            <button type="submit" class="btn-primary">Iniciar sesión</button>
+        </form>
+
+        <!-- Botones de inicio de sesión alternativo -->
+        <button class="btn-google">Iniciar sesión con Google</button>
+        <button class="btn-apple">Iniciar sesión con Apple</button>
+
+        <!-- Crear cuenta -->
+        <p class="new-user">
+            ¿Eres nuevo en Leon's? <a href="#" class="create-account">Crear cuenta</a>
+        </p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Captura el evento de envío del formulario
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            window.location.href = "/index.html"; // Redirige a index.html
+        });
+
+        // Alternar visibilidad de la contraseña
+        document.querySelector('.toggle-password').addEventListener('click', function() {
+            const passwordInput = document.querySelector('input[name="password"]');
+            const isPasswordVisible = passwordInput.type === 'text';
+            passwordInput.type = isPasswordVisible ? 'password' : 'text';
+        });
+    </script>
+</body>
+</html>

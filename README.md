@@ -9,3 +9,8 @@ npm -v    # Muestra la versión de npm instalada
 - algunos casos
 
 - Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+
+Para correr el programa 
+
+- npm run dev
