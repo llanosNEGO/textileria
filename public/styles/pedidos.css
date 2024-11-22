@@ -273,8 +273,8 @@ footer {
 }
 
 .item-image {
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     margin-right: 15px; /* Espacio entre la imagen y el texto */
     border-radius: 5px; /* Opcional: para bordes redondeados */
@@ -316,7 +316,7 @@ footer {
 }
 
 .product img {
-    width:30px;
+    width:100px;
     height: auto;
     border-radius: 8px;
 }
