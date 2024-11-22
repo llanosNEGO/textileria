@@ -1,0 +1,32 @@
+{
+    "navbar": {
+      "register": "Registrar",
+      "orders": "Pedidos",
+      "contact_us": "Contáctanos",
+      "search_placeholder": "Buscar"
+    },
+    "sections": {
+      "carousel": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+      },
+      "categories": {
+        "sports_shirts": "CAMISETAS DEPORTIVAS",
+        "best_designs": "¡Los mejores diseños!",
+        "sports_hoodies": "SUDADERAS DEPORTIVAS",
+        "latest_fashion": "¡Lo último en moda!"
+      },
+      "footer": {
+        "home": "Inicio",
+        "menu": "Menú",
+        "service": "Servicio",
+        "blog": "Blog",
+        "about_us": "Sobre nosotros",
+        "contact": "Contacto",
+        "phone": "Teléfono",
+        "email": "Correo electrónico",
+        "location": "Dirección",
+        "payment_methods": "Métodos de pago"
+      }
+    }
+  }

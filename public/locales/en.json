@@ -1,0 +1,41 @@
+{
+  "navbar": {
+    "register": "Sign Up",
+    "orders": "Orders",
+    "contact_us": "Contact Us",
+    "search_placeholder": "Search"
+  },
+  "sections": {
+    "categories": {
+      "sports_shirts": "SPORTS SHIRTS",
+      "best_designs": "The best designs!"
+    },
+    "vendido": {
+      "title": "Most Sold in Sports Hoodies",
+      "product1": {
+        "title": "Men's Sports Hoodie Design Adidas",
+        "price": "S/ 59.99"
+      },
+      "product2": {
+        "title": "Women's Sports Hoodie Design Adidas",
+        "price": "S/ 69.99"
+      },
+      "product3": {
+        "title": "Children's Sports Hoodie Design Adidas",
+        "price": "S/ 89.99"
+      }
+    },
+    "footer": {
+      "home": "HOME",
+      "menu": "MENU",
+      "service": "SERVICE",
+      "blog": "BLOG",
+      "about_us": "ABOUT US",
+      "contact": "CONTACT",
+      "phone": "999999999",
+      "email": "contacto@LeonsPeru.com",
+      "location": "Jr. Juan Villanueva 920 0600",
+      "payment_methods": "PAYMENT METHODS"
+    }
+  }
+}
