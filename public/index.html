@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/44c1fd9490.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.userway.org/widget.js" data-account="d4lUeu8eHh"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -20,7 +21,9 @@
             <div class="navbar">
                 <a href="/templates/registrarse.html" class="h-pedios">Regístrate</a>
                 <a href="/templates/pedidos.html" class="h-pedios">Pedidos</a>
-                <a href="#" class="h-contactanos">Contáctanos</a>
+                <a href="https://web.whatsapp.com/send?phone=51971435299&text=Hola,%20quiero%20realizar%20un%20pedido." 
+                class="h-contactanos" 
+                target="_blank">Contáctanos</a>
                 <a href="/templates/carrito.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="navbar-right">
@@ -34,7 +37,7 @@
                     <option value="en">English</option>
                 </select>
             </div>
-            <!-- Menú lateral -->
+            <!-- Menú lateral simplificado -->
             <div id="menuDropdown" class="menu-dropdown">
                 <div class="menu-header">
                     <h2>¡Hola!</h2>
@@ -42,12 +45,27 @@
                 </div>
                 <div class="menu-content">
                     <a href="/index.html">Inicio</a>
-                    <a href="/templates/hombres_po.html">Hombre Polos</a>
-                    <a href="/templates/hombres_bu.html">Hombre Buzos</a>
-                    <a href="/templates/mujeres_po.html">Mujer Polos</a>
-                    <a href="/templates/mujeres_bu.html">Mujer Buzos</a>
-                    <a href="/templates/niños_po.html">Niños Polos</a>
-                    <a href="/templates/niños_bu.html">Niños Buzos</a>
+                    <div class="menu-item">
+                        <span>Hombres</span>
+                        <div class="submenu">
+                            <a href="/templates/hombres_po.html">Polos</a>
+                            <a href="/templates/hombres_bu.html">Buzos</a>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <span>Mujeres</span>
+                        <div class="submenu">
+                            <a href="/templates/mujeres_po.html">Polos</a>
+                            <a href="/templates/mujeres_bu.html">Buzos</a>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <span>Niños</span>
+                        <div class="submenu">
+                            <a href="/templates/niños_po.html">Polos</a>
+                            <a href="/templates/niños_bu.html">Buzos</a>
+                        </div>
+                    </div>
                     <a href="#"></a>
                     <a href="#"></a>
                     <a href="#"></a>
@@ -140,76 +158,76 @@
     <section class="vendido">
         <h2>Lo mas pedido en Buzos</h2>
         <div class="productos" >
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Hombre Diseño Adidas', 'S/ 59.99', '/images/hombre_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Polo deportivo Hombre Diseño Adidas', 'S/ 89.99', '/images/hombre_deportivo6.png')">
                 <div class="imagen">
-                    <img src="/images/hombre_buzos.png" alt="hombre" class="category-image">
+                    <img src="/images/hombre_deportivo6.png" alt="hombre" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Hombre Diseño Adidas</h1>
-                    <h1>S/ 59.99</h1>
+                    <h1>Polo deportivo Hombre Diseño Adidas</h1>
+                    <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Mujer Diseño Adidas', 'S/ 69.99', '/images/mujer_buzos.png')">  
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 69.99', '/images/niños_buzos2.png')">  
                 <div class="imagen">
-                    <img src="/images/mujer_buzos.png" alt="mujer" class="category-image">
+                    <img src="/images/niños_buzos2.png" alt="mujer" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Mujer Diseño Adidas</h1>
+                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
                     <h1>S/ 69.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niño_deportivo5.png')">
                 <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/niño_deportivo5.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
                     <h1>Buzo deportivo Niños Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Hombre Diseño Adidas seleccion Alemania', 'S/ 139.99', '/images/hombre_buzos8.png')">
                 <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/hombre_buzos8.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
+                    <h1>Buzo deportivo Hombre Diseño Adidas seleccion Alemania</h1>
+                    <h1>S/ 139.99</h1>
+                </div>
+            </div>
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Hombre Diseño Adidas', 'S/ 89.99', '/images/hombre_deportivo4.png')">
+                <div class="imagen">
+                    <img src="/images/hombre_deportivo4.png" alt="ninio" class="category-image">
+                </div>
+                <div class="descripcion">
+                    <h1>Buzo deportivo Hombre Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Mujer Adidas', 'S/ 89.99', '/images/mujer_buzos7.png')">
                 <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/mujer_buzos7.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
+                    <h1>Buzo deportivo Mujer Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Polo deportivo Mujer Diseño Adidas', 'S/ 89.99', '/images/mujer_polo5.png')">
                 <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/mujer_polo5.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
+                    <h1>Polo deportivo Mujer Diseño Adidas</h1>
                     <h1>S/ 89.99</h1>
                 </div>
             </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
+            <div class="apartado" onclick="togglePreview('Buzo deportivo Hombre Diseño Adidas club Barcelona', 'S/ 139.99', '/images/hombre_buzos7.png')">
                 <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
+                    <img src="/images/hombre_buzos7.png" alt="ninio" class="category-image">
                 </div>
                 <div class="descripcion">
-                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
-                    <h1>S/ 89.99</h1>
-                </div>
-            </div>
-            <div class="apartado" onclick="togglePreview('Buzo deportivo Niños Diseño Adidas', 'S/ 89.99', '/images/niños_buzos.png')">
-                <div class="imagen">
-                    <img src="/images/niños_buzos.png" alt="ninio" class="category-image">
-                </div>
-                <div class="descripcion">
-                    <h1>Buzo deportivo Niños Diseño Adidas</h1>
-                    <h1>S/ 89.99</h1>
+                    <h1>Buzo deportivo Hombre Diseño Adidas club Barcelona</h1>
+                    <h1>S/ 139.99</h1>
                 </div>
             </div>
         </div>
@@ -232,8 +250,7 @@
                 <ul>
                     <li><a href="#">INICIO</a></li>
                     <li><a href="#">MENU</a></li>
-                    <li><a href="#">SERVCIO</a></li>
-                    <li><a href="#">BLOG</a></li>
+                    <li><a href="/templates/pedidos.html">PEDIDOS</a></li>
                     <li><a href="#">NOSOTROS</a></li>
                 </ul>
             </div>
@@ -242,7 +259,7 @@
                     <li><a href="#"><i class="fa-solid fa-users"></i> CONTACTO</a></li>
                     <li><a href="#"><i class="fa-solid fa-phone"></i> 999999999 </a></li>
                     <li><a href="#"><i class="fa-solid fa-at"></i> contacto@LeonsPeru.com</a></li>
-                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> Jr. Juan Villanueva 920 0600</a></li>
+                    <li><a href="#"><i class="fa-solid fa-location-dot"></i> Jr. Juan Villanueva 920 </a></li>
                 </ul>
             </div>
             <div class="footer-right">
@@ -268,7 +285,18 @@
             if (!event.target.closest('.menu-icon') && !event.target.closest('#menuDropdown')) {
                 menu.classList.remove("show");
             }
-        }
+        };
+
+        // Opcional: Mostrar/ocultar submenús
+        document.querySelectorAll('.menu-item > span').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var submenu = this.nextElementSibling;
+                if (submenu) {
+                    submenu.classList.toggle('show');
+                }
+            });
+        });
+
         function togglePreview(title, price, imageUrl) {
             openPreview(title, price, imageUrl);
         }

@@ -32,9 +32,10 @@
     cursor: pointer;
     margin-left: 10px;
     font-size: 15px;
+    margin-right: 60px;
 }
 .input{
-    width: 800px;
+    width: 600px;
     padding: 5px 10px;
     border-radius: 5px;
     border-color: #aaaaaa69;
@@ -73,6 +74,25 @@
     transition: transform 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
+}
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.menu-item .submenu {
+    margin-left: 20px;
+    display: none; /* Ocultar submenús por defecto */
+}
+
+.menu-item:hover .submenu {
+    display: block; /* Mostrar submenú al pasar el cursor */
 }
 
 /* Mostrar el menú cuando está activo */

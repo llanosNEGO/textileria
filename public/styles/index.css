@@ -31,7 +31,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 15px;
 }
 .input{
@@ -82,6 +82,25 @@
     transform: translateX(0);
     max-height: 800px; 
     overflow-y: auto; 
+}
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.menu-item .submenu {
+    margin-left: 20px;
+    display: none; /* Ocultar submenús por defecto */
+}
+
+.menu-item:hover .submenu {
+    display: block; /* Mostrar submenú al pasar el cursor */
 }
 
 /* Estilo del encabezado del menú */
